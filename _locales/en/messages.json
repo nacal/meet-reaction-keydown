@@ -1,0 +1,6 @@
+{
+  "extention_name": { "message": "Meet Reaction Keydown" },
+  "extention_description": {
+    "message": "Enable keydown to run the reaction function of Google Meet."
+  }
+}

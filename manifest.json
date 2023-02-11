@@ -1,12 +1,13 @@
 {
-  "name": "meet-reaction-keydown",
-  "description": "Enable keydown to run the reaction function of google meet.",
+  "name": "__MSG_extention_name__",
+  "description": "__MSG_extention_description__",
   "manifest_version": 3,
   "version": "1.0.0",
+  "default_locale": "en",
   "content_scripts": [
     {
       "matches": ["https://meet.google.com/*"],
-      "css": ["style.css"],
+      "css": ["index.css"],
       "js": ["index.js"]
     }
   ],

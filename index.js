@@ -2,7 +2,8 @@ let bunnerIsExsist = null
 const getReactionBanner = () => {
   return (
     document.querySelector('[aria-label="リアクション"]') ??
-    document.querySelector('[aria-label="Reactions"]')
+    document.querySelector('[aria-label="Reactions"]') ??
+    null
   )
 }
 
@@ -98,7 +99,8 @@ const main = (e) => {
   const callback = () => {
     const reactionButton =
       document.querySelector('[aria-label="リアクションを送信"]') ??
-      document.querySelector('[aria-label="Send a reaction"]')
+      document.querySelector('[aria-label="Send a reaction"]') ??
+      null
 
     const reactionBanner = getReactionBanner()
 

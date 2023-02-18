@@ -1,4 +1,6 @@
 let bunnerIsExsist = null
+let timer
+
 const getReactionBanner = () => {
   return (
     document.querySelector('[aria-label="リアクション"]') ??
@@ -90,7 +92,8 @@ const reactionKeydown = (event) => {
 
 const callbackStartListenKeydown = () => {
   document.removeEventListener('keydown', reactionKeydown)
-  setTimeout(() => {
+  clearTimeout(timer)
+  timer = setTimeout(() => {
     startListenKeydown()
   }, 500)
 }
@@ -114,6 +117,7 @@ const main = (e) => {
   }
   const buttonIsExsist = setInterval(callback, 1000)
   document.body.addEventListener('click', callbackStartListenKeydown)
+  window.addEventListener('resize', callbackStartListenKeydown)
 }
 
 window.addEventListener('load', main, false)

@@ -32,6 +32,7 @@ const startListenKeydown = () => {
 
     const reactions = getReactionDOM()
     Object.keys(reactions).forEach((key, index) => {
+      reactions[key].parentNode.focus()
       const badge = document.createElement('div')
       badge.textContent = index + 1
       badge.classList.add('badge')

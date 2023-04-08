@@ -91,14 +91,6 @@ const reactionKeydown = (event) => {
   }
 }
 
-const callbackStartListenKeydown = () => {
-  document.removeEventListener('keydown', reactionKeydown)
-  clearTimeout(timer)
-  timer = setTimeout(() => {
-    startListenKeydown()
-  }, 500)
-}
-
 const main = (e) => {
   const callback = () => {
     const reactionButton =
@@ -113,12 +105,9 @@ const main = (e) => {
       if (reactionBanner == null) reactionButton.click()
 
       bunnerIsExsist = setInterval(startListenKeydown, 1000)
-      reactionButton.addEventListener('click', callbackStartListenKeydown)
     }
   }
   const buttonIsExsist = setInterval(callback, 1000)
-  document.body.addEventListener('click', callbackStartListenKeydown)
-  window.addEventListener('resize', callbackStartListenKeydown)
 }
 
 window.addEventListener('load', main, false)

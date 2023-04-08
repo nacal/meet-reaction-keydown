@@ -1,11 +1,12 @@
 .badge {
   position: absolute;
   bottom: 0;
-  right: -5px;
+  right: 0;
   background-color: rgb(60, 64, 67);
   color: rgb(255, 255, 255);
   border-radius: 50%;
-  width: 1rem;
-  height: 1rem;
-  line-height: 1rem;
+  width: 1.125em;
+  height: 1.125em;
+  line-height: 1.125em;
+  font-size: 1rem;
 }

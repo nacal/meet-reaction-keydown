@@ -3,8 +3,8 @@ let timer
 
 const getReactionBanner = () => {
   return (
-    document.querySelector('[aria-label="リアクション"]') ??
-    document.querySelector('[aria-label="Reactions"]') ??
+    document.querySelector('[aria-label="リアクションを送信"]') ??
+    document.querySelector('[aria-label="Send a reaction"]') ??
     null
   )
 }
